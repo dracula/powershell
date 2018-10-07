@@ -1,8 +1,10 @@
 # Dracula for the Windows 10 Console
 
-> A dark theme for [cmd.exe](https://en.wikipedia.org/wiki/Cmd.exe) and [PowerShell](https://github.com/PowerShell/PowerShell)
+> A dark theme for the Windows 10 Console, supports both [cmd.exe](https://en.wikipedia.org/wiki/Cmd.exe) and [PowerShell](https://github.com/PowerShell/PowerShell)
 
 ![Screenshot](https://raw.githubusercontent.com/waf/dracula-cmd/master/images/screenshot.png)
+
+<p align="center"><i>git integration is available only in powershell via posh-git</i></p>
 
 ## Theme Installation
 
