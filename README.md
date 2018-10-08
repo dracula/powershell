@@ -9,7 +9,7 @@
 ## Theme Installation
 
 1. [Download and extract](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) ColorTool. The [source code](https://github.com/Microsoft/console/tree/master/tools/ColorTool) is available from Microsoft.
-1. Open cmd.exe and run `ColorTool.exe -b Dracula.itermcolors`. The Dracula.itermcolors file is an iterm theme modified to work for the windows console.
+1. Open cmd.exe and run `ColorTool.exe -b Dracula.ini`.
 1. Right-click on the window titlebar and choose `Properties`, then on the `Font` tab choose Consolas. Click `OK` to save.
     - Note that this step is required, even if your font is already set to Consolas, due to the way that the windows console saves its settings.
 
@@ -17,7 +17,7 @@ Perform the same steps above, but in a powershell window, for powershell support
 
 ## cmd.exe prompt
 
-1. After installing the theme, set the `prompt` environment variable to `$E[0;32;40m→ $E[0;36;40m$p$E[0;35;40m› $E[0;38;40m` to get the prompt in the screenshot.
+1. After installing the theme, set the `prompt` environment variable to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m` to get the prompt in the screenshot.
     - In the start menu, search for "Edit environment variables for your account."
     - Add a new user variable named `prompt` with the above value.
 
@@ -26,14 +26,23 @@ Perform the same steps above, but in a powershell window, for powershell support
 1. Install the 1.0 version of posh-git.
     - It's currently prerelease, so you'll need to install it with `Install-Module -Name posh-git -AllowPrerelease -Force`
     - If you don't have an `-AllowPrerelease` flag, upgrade PowerShellGet with `Install-Module -Name PowerShellGet -Force` first.
-1. Ensure the latest version of PSReadLine is installed. It's installed by default in Windows 10, but you'll most likely [need to upgrade it](https://github.com/lzybkr/PSReadLine#user-content-upgrading).
-1. Append the following lines to your [PowerShell $profile file](https://ss64.com/ps/syntax-profile.html):
+1. Ensure the latest version of PSReadLine (2.0 or later) is installed. It's installed by default in Windows 10, but you'll most likely [need to upgrade it](https://github.com/lzybkr/PSReadLine#user-content-upgrading).
+1. Put the following lines in your [PowerShell $profile file](https://ss64.com/ps/syntax-profile.html):
 
 ```powershell
-# Dracula PSReadline Configuration
-Set-PSReadlineOption -TokenKind Parameter -ForegroundColor Gray
-Set-PSReadlineOption -TokenKind Command -ForegroundColor Green
+# Dracula readline configuration. Requires version 2.0, if you have 1.2 convert to `Set-PSReadlineOption -TokenType`
+Set-PSReadlineOption -Color @{
+    "Command" = [ConsoleColor]::Green
+    "Parameter" = [ConsoleColor]::Gray
+    "Operator" = [ConsoleColor]::Magenta
+    "Variable" = [ConsoleColor]::White
+    "String" = [ConsoleColor]::Yellow
+    "Number" = [ConsoleColor]::Blue
+    "Type" = [ConsoleColor]::Cyan
+    "Comment" = [ConsoleColor]::DarkCyan
+}
 # Dracula Prompt Configuration
+Import-Module posh-git
 $GitPromptSettings.DefaultPromptPrefix.Text = "$([char]0x2192) " # arrow unicode symbol
 $GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Green
 $GitPromptSettings.DefaultPromptPath.ForegroundColor =[ConsoleColor]::Cyan
@@ -53,19 +62,19 @@ There are two possible reasons for this:
 
 1. Step 3 from the theme installation was not followed; it's a requirement for the way that the windows console properties save settings.
 1. The shortcut used to apply the theme was different from shortcut used to open the console.
-    - The windows console stores its font / color settings in per-shortcut. You can see / delete the special cases in the registry, in `\HKEY_CURRENT_USER\Console\` so the defaults are used.
+    - The windows console stores its font / color settings in per-shortcut. You can see / delete the special cases in the registry. Go to `\HKEY_CURRENT_USER\Console\` and delete the subkeys so the default is used.
 
 ### What's that crazy cmd.exe prompt string?
 
 The cmd.exe prompt value can be broken down into the following [ANSI escape sequences](http://ascii-table.com/ansi-escape-sequences.php):
 
-- `$E[0;32;40m` - normal text with a green foreground and black background
+- `$E[1;32;40m` - normal text with a green foreground and black background
 - `→ ` - unicode arrow and space
-- `$E[0;36;40m` - normal text with a cyan foreground and black background
+- `$E[1;36;40m` - normal text with a cyan foreground and black background
 - `$p` - current drive and path. See `prompt /?` output for additional values
-- `$E[0;35;40m` - normal text with a magenta foreground and black background
+- `$E[1;35;40m` - normal text with a magenta foreground and black background
 - `› ` - unicode chevron and space
-- `$E[0;38;40m` - normal text with a default foreground and black background
+- `$E[1;37;40m` - normal text with a white foreground and black background
 
 ## Team
 
