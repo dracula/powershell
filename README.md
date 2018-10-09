@@ -1,6 +1,6 @@
-# Dracula for the Windows 10 Console
+# Dracula for the PowerShell Console
 
-> A dark theme for the Windows 10 Console, supports both [cmd.exe](https://en.wikipedia.org/wiki/Cmd.exe) and [PowerShell](https://github.com/PowerShell/PowerShell)
+> A dark theme for the Windows 10 Console, supports both [PowerShell](https://github.com/PowerShell/PowerShell) and [cmd.exe](https://en.wikipedia.org/wiki/Cmd.exe).
 
 ![Screenshot](https://raw.githubusercontent.com/waf/dracula-cmd/master/images/screenshot.png)
 
@@ -8,18 +8,12 @@
 
 ## Theme Installation
 
-1. [Download and extract](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) ColorTool. The [source code](https://github.com/Microsoft/console/tree/master/tools/ColorTool) is available from Microsoft.
-1. Open cmd.exe and run `ColorTool.exe -b Dracula.ini`.
+1. [Download and unzip](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) ColorTool. The [source code](https://github.com/Microsoft/console/tree/master/tools/ColorTool) is available from Microsoft.
+1. Open PowerShell, navigate to unzipped `ColorTool` directory, and run `ColorTool.exe -b Dracula.ini`.
 1. Right-click on the window titlebar and choose `Properties`, then on the `Font` tab choose Consolas. Click `OK` to save.
     - Note that this step is required, even if your font is already set to Consolas, due to the way that the windows console saves its settings.
 
-Perform the same steps above, but in a powershell window, for powershell support.
-
-## cmd.exe prompt
-
-1. After installing the theme, set the `prompt` environment variable to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m` to get the prompt in the screenshot.
-    - In the start menu, search for "Edit environment variables for your account."
-    - Add a new user variable named `prompt` with the above value.
+For cmd.exe support, perform the same steps above but in a cmd.exe window.
 
 ## PowerShell prompt
 
@@ -27,34 +21,17 @@ Perform the same steps above, but in a powershell window, for powershell support
     - It's currently prerelease, so you'll need to install it with `Install-Module -Name posh-git -AllowPrerelease -Force`
     - If you don't have an `-AllowPrerelease` flag, upgrade PowerShellGet with `Install-Module -Name PowerShellGet -Force` first.
 1. Ensure the latest version of PSReadLine (2.0 or later) is installed. It's installed by default in Windows 10, but you'll most likely [need to upgrade it](https://github.com/lzybkr/PSReadLine#user-content-upgrading).
-1. Put the following lines in your [PowerShell $profile file](https://ss64.com/ps/syntax-profile.html):
+1. Include [this powershell configuration](https://github.com/dracula/powershell/blob/master/theme/dracula-prompt-configuration.ps1) in your PowerShell `$profile` file.<sup>[1](#whats-the-powershell-profile-file "What's the PowerShell `$profile` file?")</sup>
 
-```powershell
-# Dracula readline configuration. Requires version 2.0, if you have 1.2 convert to `Set-PSReadlineOption -TokenType`
-Set-PSReadlineOption -Color @{
-    "Command" = [ConsoleColor]::Green
-    "Parameter" = [ConsoleColor]::Gray
-    "Operator" = [ConsoleColor]::Magenta
-    "Variable" = [ConsoleColor]::White
-    "String" = [ConsoleColor]::Yellow
-    "Number" = [ConsoleColor]::Blue
-    "Type" = [ConsoleColor]::Cyan
-    "Comment" = [ConsoleColor]::DarkCyan
-}
-# Dracula Prompt Configuration
-Import-Module posh-git
-$GitPromptSettings.DefaultPromptPrefix.Text = "$([char]0x2192) " # arrow unicode symbol
-$GitPromptSettings.DefaultPromptPrefix.ForegroundColor = [ConsoleColor]::Green
-$GitPromptSettings.DefaultPromptPath.ForegroundColor =[ConsoleColor]::Cyan
-$GitPromptSettings.DefaultPromptSuffix.Text = "$([char]0x203A) " # chevron unicode symbol
-$GitPromptSettings.DefaultPromptSuffix.ForegroundColor = [ConsoleColor]::Magenta
-# Dracula Git Status Configuration
-$GitPromptSettings.BeforeStatus.ForegroundColor = [ConsoleColor]::Blue
-$GitPromptSettings.BranchColor.ForegroundColor = [ConsoleColor]::Blue
-$GitPromptSettings.AfterStatus.ForegroundColor = [ConsoleColor]::Blue
-```
+## cmd.exe prompt
+
+Set the environment variable `prompt` to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m`
 
 ## Frequently Asked Questions
+
+### What's the PowerShell `$profile` file?
+
+This is a PowerShell file that's run when a PowerShell session is started, similar to a `.bashrc`. Type `$profile` in a PowerShell window to see the path. See https://ss64.com/ps/syntax-profile.html for more detail.
 
 ### After applying the theme, other consoles don't always have the right colors.
 
@@ -62,7 +39,7 @@ There are two possible reasons for this:
 
 1. Step 3 from the theme installation was not followed; it's a requirement for the way that the windows console properties save settings.
 1. The shortcut used to apply the theme was different from shortcut used to open the console.
-    - The windows console stores its font / color settings in per-shortcut. You can see / delete the special cases in the registry. Go to `\HKEY_CURRENT_USER\Console\` and delete the subkeys so the default is used.
+    - The windows console stores its font / color settings in per-shortcut. You can see / delete the special cases in the registry. Go to `\HKEY_CURRENT_USER\Console\` and delete the subkeys so the default values in the `Console` key are used.
 
 ### What's that crazy cmd.exe prompt string?
 
