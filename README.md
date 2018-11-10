@@ -55,11 +55,15 @@ The cmd.exe prompt value can be broken down into the following [ANSI escape sequ
 
 ## Team
 
-This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/cmd/graphs/contributors).
+This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/powershell/graphs/contributors).
 
 [![Will Fuqua](https://avatars3.githubusercontent.com/u/97195?v=3&s=70)](https://github.com/waf) | [![Zeno Rocha](https://avatars2.githubusercontent.com/u/398893?v=3&s=70)](https://github.com/zenorocha)
 --- | ---
 [Will Fuqua](https://github.com/waf) | [Zeno Rocha](https://github.com/zenorocha)
+
+#### Contributors
+
+[Tim Kilåker](https://github.com/TKilaker) - Contributed an updated release of ColorTool.exe.
 
 ## License
 
