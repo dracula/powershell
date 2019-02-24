@@ -9,7 +9,7 @@
 ## Theme Installation
 
 1. [Download and unzip](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) ColorTool. The [source code](https://github.com/Microsoft/console/tree/master/tools/ColorTool) is available from Microsoft.
-1. Open PowerShell, navigate to unzipped `ColorTool` directory, and run `ColorTool.exe -b Dracula.ini`.
+1. Open PowerShell, navigate to unzipped `ColorTool` directory, and run `ColorTool.exe -b Dracula-ColorTool.itermcolors`.
 1. Right-click on the window titlebar and choose `Properties`, then on the `Font` tab choose Consolas. Click `OK` to save.
     - Note that this step is required, even if your font is already set to Consolas, due to the way that the windows console saves its settings.
 

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Name:		Dracula (for Windows Console and ColorTool)
+    Author:		Will Fuqua, Zeno Rocha
+    Url:		https://github.com/dracula/powershell
+    License:	The MIT License (MIT)
+
+    A dark color scheme for Windows PowerShell and cmd.exe, using the Dracula colors
+    designed by Zeno Rocha. See https://github.com/dracula/powershell for installation
+    instructions, and https://github.com/dracula/ for colorschemes for additional applications.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Ansi 0 Color</key>
+        <dict>
+            <!-- DARK_BLACK -->
+            <key>Red Component</key>
+            <real>0.152941176470588</real>
+            <key>Green Component</key>
+            <real>0.16078431372549</real>
+            <key>Blue Component</key>
+            <real>0.207843137254902</real>
+        </dict>
+        <key>Ansi 1 Color</key>
+        <dict>
+            <!-- DARK_RED -->
+            <key>Red Component</key>
+            <real>1</real>
+            <key>Green Component</key>
+            <real>0.333333333333333</real>
+            <key>Blue Component</key>
+            <real>0.333333333333333</real>
+        </dict>
+        <key>Ansi 2 Color</key>
+        <dict>
+            <!-- DARK_GREEN -->
+            <key>Red Component</key>
+            <real>0.313725490196078</real>
+            <key>Green Component</key>
+            <real>0.980392156862745</real>
+            <key>Blue Component</key>
+            <real>0.482352941176471</real>
+        </dict>
+        <key>Ansi 3 Color</key>
+        <dict>
+            <!-- DARK_YELLOW -->
+            <key>Red Component</key>
+            <real>1</real>
+            <key>Green Component</key>
+            <real>0.72156862745098</real>
+            <key>Blue Component</key>
+            <real>0.423529411764706</real>
+        </dict>
+        <key>Ansi 4 Color</key>
+        <dict>
+            <!-- DARK_BLUE -->
+            <key>Red Component</key>
+            <real>0.741176470588235</real>
+            <key>Green Component</key>
+            <real>0.576470588235294</real>
+            <key>Blue Component</key>
+            <real>0.976470588235294</real>
+        </dict>
+        <key>Ansi 5 Color</key>
+        <dict>
+            <!-- DARK_MAGENTA -->
+            <key>Red Component</key>
+            <real>1</real>
+            <key>Green Component</key>
+            <real>0.474509803921569</real>
+            <key>Blue Component</key>
+            <real>0.776470588235294</real>
+        </dict>
+        <key>Ansi 6 Color</key>
+        <dict>
+            <!-- DARK_CYAN -->
+            <key>Red Component</key>
+            <real>0.384313725490196</real>
+            <key>Green Component</key>
+            <real>0.447058823529412</real>
+            <key>Blue Component</key>
+            <real>0.643137254901961</real>
+        </dict>
+        <key>Ansi 7 Color</key>
+        <dict>
+            <!-- DARK_WHITE -->
+            <key>Red Component</key>
+            <real>0.972549019607843</real>
+            <key>Green Component</key>
+            <real>0.972549019607843</real>
+            <key>Blue Component</key>
+            <real>0.949019607843137</real>
+        </dict>
+        <key>Ansi 8 Color</key>
+        <dict>
+            <!-- BRIGHT_BLACK -->
+            <key>Red Component</key>
+            <real>0.333333333333333</real>
+            <key>Green Component</key>
+            <real>0.333333333333333</real>
+            <key>Blue Component</key>
+            <real>0.333333333333333</real>
+        </dict>
+        <key>Ansi 9 Color</key>
+        <dict>
+            <!-- BRIGHT_RED -->
+            <key>Red Component</key>
+            <real>1</real>
+            <key>Green Component</key>
+            <real>0.333333333333333</real>
+            <key>Blue Component</key>
+            <real>0.333333333333333</real>
+        </dict>
+        <key>Ansi 10 Color</key>
+        <dict>
+            <!-- BRIGHT_GREEN -->
+            <key>Red Component</key>
+            <real>0.313725490196078</real>
+            <key>Green Component</key>
+            <real>0.980392156862745</real>
+            <key>Blue Component</key>
+            <real>0.482352941176471</real>
+        </dict>
+        <key>Ansi 11 Color</key>
+        <dict>
+            <!-- BRIGHT_YELLOW -->
+            <key>Red Component</key>
+            <real>0.945098039215686</real>
+            <key>Green Component</key>
+            <real>0.980392156862745</real>
+            <key>Blue Component</key>
+            <real>0.549019607843137</real>
+        </dict>
+        <key>Ansi 12 Color</key>
+        <dict>
+            <!-- BRIGHT_BLUE -->
+            <key>Red Component</key>
+            <real>0.741176470588235</real>
+            <key>Green Component</key>
+            <real>0.576470588235294</real>
+            <key>Blue Component</key>
+            <real>0.976470588235294</real>
+        </dict>
+        <key>Ansi 13 Color</key>
+        <dict>
+            <!-- BRIGHT_MAGENTA -->
+            <key>Red Component</key>
+            <real>1</real>
+            <key>Green Component</key>
+            <real>0.474509803921569</real>
+            <key>Blue Component</key>
+            <real>0.776470588235294</real>
+        </dict>
+        <key>Ansi 14 Color</key>
+        <dict>
+            <!-- BRIGHT_CYAN -->
+            <key>Red Component</key>
+            <real>0.545098039215686</real>
+            <key>Green Component</key>
+            <real>0.913725490196078</real>
+            <key>Blue Component</key>
+            <real>0.992156862745098</real>
+        </dict>
+        <key>Ansi 15 Color</key>
+        <dict>
+            <!-- BRIGHT_WHITE -->
+            <key>Red Component</key>
+            <real>1</real>
+            <key>Green Component</key>
+            <real>1</real>
+            <key>Blue Component</key>
+            <real>1</real>
+        </dict>
+        <key>Background Color</key>
+        <dict>
+            <!-- must match one of the above ANSI colors exactly -->
+            <key>Red Component</key>
+            <real>0.152941176470588</real>
+            <key>Green Component</key>
+            <real>0.16078431372549</real>
+            <key>Blue Component</key>
+            <real>0.207843137254902</real>
+        </dict>
+        <key>Foreground Color</key>
+        <dict>
+            <!-- must match one of the above ANSI colors exactly -->
+            <key>Red Component</key>
+            <real>0.972549019607843</real>
+            <key>Green Component</key>
+            <real>0.972549019607843</real>
+            <key>Blue Component</key>
+            <real>0.949019607843137</real>
+        </dict>
+    </dict>
+</plist>
