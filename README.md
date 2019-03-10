@@ -27,6 +27,10 @@ For cmd.exe support, perform the same steps above but in a cmd.exe window.
 
 Set the environment variable `prompt` to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m`
 
+## Titlebar color
+
+In Windows 10, the titlebar color can be set system-wide in Settings → Personalization → Colors → Custom color → More → #262835.
+
 ## Frequently Asked Questions
 
 ### What's the PowerShell `$profile` file?
