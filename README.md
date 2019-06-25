@@ -6,7 +6,11 @@
 
 <p align="center"><i>git integration is available only in powershell via posh-git</i></p>
 
-## Theme Installation
+## Installation
+
+There are 4 parts to configure: the colors, the powershell prompt, the cmd.exe prompt, and the titlebar color. All of these are optional.
+
+**Colors Installation**
 
 1. [Download and unzip](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) ColorTool. The [source code](https://github.com/Microsoft/Terminal/tree/master/src/tools/ColorTool) is available from Microsoft.
 1. Open PowerShell, navigate to unzipped `ColorTool` directory, and run `install.cmd`.
@@ -15,7 +19,7 @@
 
 For cmd.exe support, perform the same steps above but in a cmd.exe window.
 
-## PowerShell prompt
+**PowerShell prompt**
 
 1. Install the 1.0 version of posh-git.
     - It's currently prerelease, so you'll need to install it with `Install-Module -Name posh-git -AllowPrerelease -Force`
@@ -23,21 +27,21 @@ For cmd.exe support, perform the same steps above but in a cmd.exe window.
 1. Ensure the latest version of PSReadLine (2.0 or later) is installed. It's installed by default in Windows 10, but you'll most likely [need to upgrade it](https://github.com/lzybkr/PSReadLine#user-content-upgrading).
 1. Include [this powershell configuration](https://github.com/dracula/powershell/blob/master/theme/dracula-prompt-configuration.ps1) in your PowerShell `$profile` file.<sup>[1](#whats-the-powershell-profile-file "What's the PowerShell `$profile` file?")</sup>
 
-## cmd.exe prompt
+**cmd.exe prompt**
 
 Set the environment variable `prompt` to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m`
 
-## Titlebar color
+**Titlebar color**
 
 In Windows 10, the titlebar color can be set system-wide in Settings → Personalization → Colors → Custom color → More → #262835.
 
 ## Frequently Asked Questions
 
-### What's the PowerShell `$profile` file?
+**What's the PowerShell `$profile` file?**
 
 This is a PowerShell file that's run when a PowerShell session is started, similar to a `.bashrc`. Type `$profile` in a PowerShell window to see the path. See https://ss64.com/ps/syntax-profile.html for more detail.
 
-### After applying the theme, other consoles don't always have the right colors.
+**After applying the theme, other consoles don't always have the right colors.**
 
 There are two possible reasons for this:
 
@@ -45,7 +49,7 @@ There are two possible reasons for this:
 1. The shortcut used to apply the theme was different from shortcut used to open the console.
     - The windows console stores its font / color settings in per-shortcut. You can see / delete the special cases in the registry. Go to `\HKEY_CURRENT_USER\Console\` and delete the subkeys so the default values in the `Console` key are used.
 
-### What's that crazy cmd.exe prompt string?
+**What's that crazy cmd.exe prompt string?**
 
 The cmd.exe prompt value can be broken down into the following [ANSI escape sequences](http://ascii-table.com/ansi-escape-sequences.php):
 
@@ -56,6 +60,15 @@ The cmd.exe prompt value can be broken down into the following [ANSI escape sequ
 - `$E[1;35;40m` - normal text with a magenta foreground and black background
 - `› ` - unicode chevron and space
 - `$E[1;37;40m` - normal text with a white foreground and black background
+
+## Uninstallation
+
+1. Uninstall the colors:
+    - Download and unzip [the same archive](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) you used to install the theme.
+    - Run uninstall.cmd
+1. Uninstall the prompts:
+    - Remove the configuration from your powershell `$profile`.
+    - Delete the `prompt` environment variable.
 
 ## Team
 
