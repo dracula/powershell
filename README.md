@@ -67,8 +67,8 @@ The cmd.exe prompt value can be broken down into the following [ANSI escape sequ
     - Download and unzip [the same archive](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) you used to install the theme.
     - Run uninstall.cmd
 1. Uninstall the prompts:
-    - Remove the configuration from your powershell `$profile`.
-    - Delete the `prompt` environment variable.
+    - PowerShell prompt: remove the configuration from your powershell `$profile`.
+    - CMD.exe prompt: delete the `prompt` environment variable.
 
 ## Team
 
