@@ -8,7 +8,7 @@
 
 ## Installation
 
-There are 4 parts to configure: the colors, the powershell prompt, the cmd.exe prompt, and the titlebar color. All of these are optional.
+There are 4 parts to configure; all of them are optional:
 
 **Colors Installation**
 
@@ -25,6 +25,7 @@ For cmd.exe support, perform the same steps above but in a cmd.exe window.
     - It's currently prerelease, so you'll need to install it with `Install-Module -Name posh-git -AllowPrerelease -Force`
     - If you don't have an `-AllowPrerelease` flag, upgrade PowerShellGet with `Install-Module -Name PowerShellGet -Force` first.
 1. Ensure the latest version of PSReadLine (2.0 or later) is installed. It's installed by default in Windows 10, but you'll most likely [need to upgrade it](https://github.com/lzybkr/PSReadLine#user-content-upgrading).
+    - You can verify that 2.0 was installed by running `(Get-Module PSReadLine).Version`. If the installation does not appear to work, please see [this issue in PSReadLine](https://github.com/PowerShell/PowerShellGet/issues/318#issuecomment-418605987)
 1. Include [this powershell configuration](https://github.com/dracula/powershell/blob/master/theme/dracula-prompt-configuration.ps1) in your PowerShell `$profile` file.<sup>[1](#whats-the-powershell-profile-file "What's the PowerShell `$profile` file?")</sup>
 
 **cmd.exe prompt**
@@ -67,8 +68,8 @@ The cmd.exe prompt value can be broken down into the following [ANSI escape sequ
     - Download and unzip [the same archive](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) you used to install the theme.
     - Run uninstall.cmd
 1. Uninstall the prompts:
-    - Remove the configuration from your powershell `$profile`.
-    - Delete the `prompt` environment variable.
+    - PowerShell prompt: remove the configuration from your powershell `$profile`.
+    - CMD.exe prompt: delete the `prompt` environment variable.
 
 ## Team
 
