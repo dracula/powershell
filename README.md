@@ -53,6 +53,10 @@ In Windows 10, the titlebar color can be set system-wide in Settings → Persona
 </p>
 </details>
 
+## Support for other terminals
+
+This repo also contains a [theme for the new Windows Terminal from Microsoft](https://github.com/dracula/powershell/blob/master/theme/Windows%2010%20Terminal%20Dracula%20Theme.json), as well as a [theme for ConEmu](https://github.com/dracula/powershell/blob/master/theme/ConEmu-Dracula-Theme.xml). An alternate version of the ConEmu theme is available at [dracula/conemu](https://github.com/dracula/conemu).
+
 ## Frequently Asked Questions
 
 <dl>
