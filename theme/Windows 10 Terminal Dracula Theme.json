@@ -1,0 +1,28 @@
+/*
+ * Dracula Theme for the new Windows Terminal from Microsoft.
+ * To install:
+ *    1. Open up the terminal settings (it will open your profiles.json file).
+ *    2. Add the below colorscheme object into the "schemes" array.
+ *    3. Under the "profiles" key, set your active "colorScheme" to "Dracula". You may need to change it for multiple profiles (powershell, cmd, etc).
+ */
+{
+    "name" : "Dracula",
+    "background" : "#272935",
+    "black" : "#272935",
+    "blue" : "#BD93F9",
+    "brightBlack" : "#555555",
+    "brightBlue" : "#BD93F9",
+    "brightCyan" : "#8BE9FD",
+    "brightGreen" : "#50FA7B",
+    "brightPurple" : "#FF79C6",
+    "brightRed" : "#FF5555",
+    "brightWhite" : "#FFFFFF",
+    "brightYellow" : "#F1FA8C",
+    "cyan" : "#6272A4",
+    "foreground" : "#F8F8F2",
+    "green" : "#50FA7B",
+    "purple" : "#6272A4",
+    "red" : "#FF5555",
+    "white" : "#F8F8F2",
+    "yellow" : "#FFB86C"
+}
