@@ -32,7 +32,7 @@ For cmd.exe support, perform the same steps above but in a cmd.exe window.
     - If you don't have an `-AllowPrerelease` flag, upgrade PowerShellGet with `Install-Module -Name PowerShellGet -Force` first.
 1. Ensure the latest version of PSReadLine (2.0 or later) is installed. It's installed by default in Windows 10, but you'll most likely [need to upgrade it](https://github.com/lzybkr/PSReadLine#user-content-upgrading).
     - You can verify that 2.0 was installed by running `(Get-Module PSReadLine).Version`. If the installation does not appear to work, please see [this issue in PSReadLine](https://github.com/PowerShell/PowerShellGet/issues/318#issuecomment-418605987)
-1. Include [this powershell configuration](https://github.com/dracula/powershell/blob/master/theme/dracula-prompt-configuration.ps1) in your PowerShell `$profile` file.<sup>[1](#whats-the-powershell-profile-file "What's the PowerShell `$profile` file?")</sup>
+1. Include [this powershell configuration](https://github.com/dracula/powershell/blob/master/theme/dracula-prompt-configuration.ps1) in your PowerShell `$profile` file.<sup>[1](#profile-explanation)</sup>
 
 </p>
 </details>
@@ -56,7 +56,7 @@ In Windows 10, the titlebar color can be set system-wide in Settings → Persona
 ## Frequently Asked Questions
 
 <dl>
-    <dt>What's the PowerShell <code>$profile</code> file?</dt>
+    <dt><a id="profile-explanation" name="profile-explanation">What's the PowerShell <code>$profile</code> file?</a></dt>
     <dd>This is a PowerShell file that's run when a PowerShell session is started, similar to a <code>.bashrc</code>. Type <code>$profile</code> in a PowerShell window to see the path. See https://ss64.com/ps/syntax-profile.html for more detail.</dd>
     <dt>After applying the theme, other consoles don't always have the right colors.</dt>
     <dd>There are two possible reasons for this:
@@ -70,7 +70,7 @@ In Windows 10, the titlebar color can be set system-wide in Settings → Persona
         </ol>
     </dd>
     <dt>What's that crazy cmd.exe prompt string?</dt>
-    <dd>The cmd.exe prompt value can be broken down into the following [ANSI escape sequences](http://ascii-table.com/ansi-escape-sequences.php)
+    <dd>The cmd.exe prompt value can be broken down into the following <a href="http://ascii-table.com/ansi-escape-sequences.php">ANSI escape sequences</a>:
         <ul>
             <li><code>E[1;32;40m</code> - normal text with a green foreground and black background</li>
             <li><code>→ </code> - unicode arrow and space</li>
