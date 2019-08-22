@@ -24,7 +24,7 @@ For cmd.exe support, perform the same steps above but in a cmd.exe window.
 </p>
 </details>
 
-<details><summary><strong>PowerShell prompt</strong></summary>
+<details><summary><strong>PowerShell Prompt</strong></summary>
 <p>
 
 1. Install the 1.0 version of posh-git.
@@ -37,7 +37,7 @@ For cmd.exe support, perform the same steps above but in a cmd.exe window.
 </p>
 </details>
 
-<details><summary><strong>cmd.exe prompt</strong></summary>
+<details><summary><strong>CMD.exe Prompt</strong></summary>
 <p>
 
 Set the environment variable `prompt` to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m`
@@ -45,7 +45,7 @@ Set the environment variable `prompt` to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40
 </p>
 </details>
 
-<details><summary><strong>Titlebar color</strong></summary>
+<details><summary><strong>Windows Titlebar Color</strong></summary>
 <p>
 
 In Windows 10, the titlebar color can be set system-wide in Settings → Personalization → Colors → Custom color → More → #262835.
@@ -55,29 +55,33 @@ In Windows 10, the titlebar color can be set system-wide in Settings → Persona
 
 ## Frequently Asked Questions
 
-**What's the PowerShell `$profile` file?**
-
-This is a PowerShell file that's run when a PowerShell session is started, similar to a `.bashrc`. Type `$profile` in a PowerShell window to see the path. See https://ss64.com/ps/syntax-profile.html for more detail.
-
-**After applying the theme, other consoles don't always have the right colors.**
-
-There are two possible reasons for this:
-
-1. Step 3 from the theme installation was not followed; it's a requirement for the way that the windows console properties save settings.
-1. The shortcut used to apply the theme was different from shortcut used to open the console.
-    - The windows console stores its font / color settings in per-shortcut. You can see / delete the special cases in the registry. Go to `\HKEY_CURRENT_USER\Console\` and delete the subkeys so the default values in the `Console` key are used.
-
-**What's that crazy cmd.exe prompt string?**
-
-The cmd.exe prompt value can be broken down into the following [ANSI escape sequences](http://ascii-table.com/ansi-escape-sequences.php):
-
-- `$E[1;32;40m` - normal text with a green foreground and black background
-- `→ ` - unicode arrow and space
-- `$E[1;36;40m` - normal text with a cyan foreground and black background
-- `$p` - current drive and path. See `prompt /?` output for additional values
-- `$E[1;35;40m` - normal text with a magenta foreground and black background
-- `› ` - unicode chevron and space
-- `$E[1;37;40m` - normal text with a white foreground and black background
+<dl>
+    <dt>What's the PowerShell <code>$profile</code> file?</dt>
+    <dd>This is a PowerShell file that's run when a PowerShell session is started, similar to a <code>.bashrc</code>. Type <code>$profile</code> in a PowerShell window to see the path. See https://ss64.com/ps/syntax-profile.html for more detail.</dd>
+    <dt>After applying the theme, other consoles don't always have the right colors.</dt>
+    <dd>There are two possible reasons for this:
+        <ol>
+            <li>Step 3 from the theme installation was not followed; it's a requirement for the way that the windows console properties save settings.</li>
+            <li>The shortcut used to apply the theme was different from shortcut used to open the console.
+                <ul>
+                    <li>The windows console stores its font / color settings in per-shortcut. You can see / delete the special cases in the registry. Go to <code>\HKEY_CURRENT_USER\Console\</code> and delete the subkeys so the default values in the <code>Console</code> key are used.</li>
+                </ul>
+            </li>
+        </ol>
+    </dd>
+    <dt>What's that crazy cmd.exe prompt string?</dt>
+    <dd>The cmd.exe prompt value can be broken down into the following [ANSI escape sequences](http://ascii-table.com/ansi-escape-sequences.php)
+        <ul>
+            <li><code>E[1;32;40m</code> - normal text with a green foreground and black background</li>
+            <li><code>→ </code> - unicode arrow and space</li>
+            <li><code>$E[1;36;40m</code> - normal text with a cyan foreground and black background</li>
+            <li><code>$p</code> - current drive and path. See <code>prompt /?</code> output for additional values</li>
+            <li><code>$E[1;35;40m</code> - normal text with a magenta foreground and black background</li>
+            <li><code>› </code> - unicode chevron and space</li>
+            <li><code>$E[1;37;40m</code> - normal text with a white foreground and black background</li>
+        </ul>
+    </dd>
+</dl>
 
 ## Uninstallation
 
