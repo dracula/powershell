@@ -10,7 +10,9 @@
 
 There are 4 parts to configure; all of them are optional:
 
-**Colors Installation**
+
+<details><summary><strong>Colors Installation</strong></summary>
+<p>
 
 1. [Download and unzip](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) ColorTool. The [source code](https://github.com/Microsoft/Terminal/tree/master/src/tools/ColorTool) is available from Microsoft.
 1. Open PowerShell, navigate to unzipped `ColorTool` directory, and run `install.cmd`.
@@ -19,7 +21,11 @@ There are 4 parts to configure; all of them are optional:
 
 For cmd.exe support, perform the same steps above but in a cmd.exe window.
 
-**PowerShell prompt**
+</p>
+</details>
+
+<details><summary><strong>PowerShell prompt</strong></summary>
+<p>
 
 1. Install the 1.0 version of posh-git.
     - It's currently prerelease, so you'll need to install it with `Install-Module -Name posh-git -AllowPrerelease -Force`
@@ -28,13 +34,24 @@ For cmd.exe support, perform the same steps above but in a cmd.exe window.
     - You can verify that 2.0 was installed by running `(Get-Module PSReadLine).Version`. If the installation does not appear to work, please see [this issue in PSReadLine](https://github.com/PowerShell/PowerShellGet/issues/318#issuecomment-418605987)
 1. Include [this powershell configuration](https://github.com/dracula/powershell/blob/master/theme/dracula-prompt-configuration.ps1) in your PowerShell `$profile` file.<sup>[1](#whats-the-powershell-profile-file "What's the PowerShell `$profile` file?")</sup>
 
-**cmd.exe prompt**
+</p>
+</details>
+
+<details><summary><strong>cmd.exe prompt</strong></summary>
+<p>
 
 Set the environment variable `prompt` to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m`
 
-**Titlebar color**
+</p>
+</details>
+
+<details><summary><strong>Titlebar color</strong></summary>
+<p>
 
 In Windows 10, the titlebar color can be set system-wide in Settings → Personalization → Colors → Custom color → More → #262835.
+
+</p>
+</details>
 
 ## Frequently Asked Questions
 
