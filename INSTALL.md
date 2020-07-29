@@ -4,8 +4,6 @@ A dark theme for the Windows 10 Console, supports both PowerShell and cmd.exe.
 
 #### Theme Installation
 
-## Installation
-
 There are 4 parts to configure; all of them are optional:
 
 
