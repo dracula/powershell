@@ -24,7 +24,7 @@ There are 3 parts to configure; all of them are optional:
 <details><summary><strong>CMD.exe Prompt</strong></summary>
 <p>
 
-Set the environment variable `prompt` to `$E[1;32;40m→ $E[1;36;40m$p$E[1;35;40m› $E[1;37;40m`
+Set the environment variable `prompt` to [the value in this file](https://raw.githubusercontent.com/dracula/powershell/master/CommandPrompt.txt). These crazy strings are called [ANSI Escape Sequences](http://ascii-table.com/ansi-escape-sequences.php).
 
 </p>
 </details>
