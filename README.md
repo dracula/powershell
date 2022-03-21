@@ -47,23 +47,29 @@ This repo also contains a [theme for the new Windows Terminal from Microsoft](ht
 ## Uninstallation
 
 1. Uninstall the colors:
-    - Download and unzip [the same archive](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) you used to install the theme.
-    - Run uninstall.cmd
+   - Download and unzip [the same archive](https://raw.githubusercontent.com/waf/dracula-cmd/master/dist/ColorTool.zip) you used to install the theme.
+   - Run uninstall.cmd
 1. Uninstall the prompts:
-    - PowerShell prompt: remove the configuration from your powershell `$profile`.
-    - CMD.exe prompt: delete the `prompt` environment variable.
+   - PowerShell prompt: remove the configuration from your powershell `$profile`.
+   - CMD.exe prompt: delete the `prompt` environment variable.
 
 ## Team
 
 This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/powershell/graphs/contributors).
 
-[![Will Fuqua](https://avatars3.githubusercontent.com/u/97195?v=3&s=70)](https://github.com/waf) | [![Zeno Rocha](https://avatars2.githubusercontent.com/u/398893?v=3&s=70)](https://github.com/zenorocha)
---- | ---
-[Will Fuqua](https://github.com/waf) | [Zeno Rocha](https://github.com/zenorocha)
+| [![Will Fuqua](https://avatars3.githubusercontent.com/u/97195?v=3&s=70)](https://github.com/waf) | [![Zeno Rocha](https://avatars2.githubusercontent.com/u/398893?v=3&s=70)](https://github.com/zenorocha) |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
+| [Will Fuqua](https://github.com/waf)                                                             | [Zeno Rocha](https://github.com/zenorocha)                                                              |
 
-#### Contributors
+## Contributors
 
 [Tim Kilåker](https://github.com/TKilaker) - Contributed an updated release of ColorTool.exe.
+
+## Community
+
+- [Twitter](https://twitter.com/draculatheme) - Best for getting updates about themes and new stuff.
+- [GitHub](https://github.com/dracula/dracula-theme/discussions) - Best for asking questions and discussing issues.
+- [Discord](https://draculatheme.com/discord-invite) - Best for hanging out with the community.
 
 ## License
 
