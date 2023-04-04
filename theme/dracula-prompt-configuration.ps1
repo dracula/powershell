@@ -8,6 +8,7 @@ Set-PSReadlineOption -Color @{
     "Number" = [ConsoleColor]::Blue
     "Type" = [ConsoleColor]::Cyan
     "Comment" = [ConsoleColor]::DarkCyan
+    "InlinePrediction" = [ConsoleColor]::DarkGray
 }
 # Dracula Prompt Configuration
 Import-Module posh-git
